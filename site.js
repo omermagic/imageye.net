@@ -38,3 +38,22 @@ if (onboarding) {
     window.location.href = 'https://www.google.com/';
   });
 }
+
+const uninstallForm = document.getElementById('uninstall-feedback');
+
+if (uninstallForm) {
+  const message = document.getElementById('uninstall-message');
+  const send = uninstallForm.querySelector('.uninstall-send');
+
+  message.addEventListener('input', () => {
+    send.disabled = message.value.length === 0;
+  });
+
+  uninstallForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    message.disabled = true;
+    send.disabled = true;
+    send.textContent = 'Sent';
+    uninstallForm.classList.add('is-submitted');
+  });
+}
