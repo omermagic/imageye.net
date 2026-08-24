@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Imageye Extension</title>
+    <meta name="description" content="Pin Imageye for easier access.">
+    <link rel="stylesheet" href="../../site.css">
+    <script src="../../site.js" defer></script>
+  </head>
+  <body>
+    <main class="installed-page" id="onboarding">
+      <div class="pin-guide" id="pin-guide" aria-hidden="true"><span class="pin-arrow">↗</span><p>Click <span class="puzzle"></span> to pin Imageye</p></div>
+
+      <section class="onboarding-stage is-active" data-stage="1" aria-live="polite">
+        <div class="welcome-card welcome-card--pin">
+          <h1><strong>Pin Imageye</strong>, for easier access!</h1>
+          <img src="../../assets/d5a7c93f171f92ac.gif" alt="How to pin Imageye in Chrome">
+          <button class="done-button" data-next-stage="2" type="button">Done</button>
+        </div>
+      </section>
+
+      <section class="onboarding-stage" data-stage="2" aria-live="polite">
+        <div class="welcome-card welcome-card--celebrate">
+          <h1>Welcome to Imageye!</h1>
+          <button class="done-button" data-next-stage="3" type="button">Give a try</button>
+        </div>
+      </section>
+
+      <section class="onboarding-stage" data-stage="3" aria-live="polite">
+        <div class="try-gallery">
+          <img src="../../assets/onboarding_1.jpg" alt="Welcome sign on a country road">
+          <img src="../../assets/onboarding_2.jpg" alt="Illuminated number two">
+          <img src="../../assets/onboarding_3.jpg" alt="Image sign in a city">
+          <img src="../../assets/onboarding_4.jpg" alt="Stylized eye illustration">
+        </div>
+        <button class="done-button try-start" data-finish-onboarding type="button">Let's start</button>
+      </section>
+    </main>
+  </body>
+</html>
