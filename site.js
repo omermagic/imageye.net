@@ -24,10 +24,18 @@ if (onboarding) {
   const stages = [...document.querySelectorAll('.onboarding-stage')];
 
   const showStage = (number) => {
+    const stageNumber = Number(number);
+
+    // Imageye's content script listens for this message and opens the
+    // extension. Keep it in the click flow so Chrome preserves user intent.
+    if (stageNumber === 3) {
+      window.postMessage('imageye_open', '*');
+    }
+
     stages.forEach((stage) => {
-      stage.classList.toggle('is-active', stage.dataset.stage === String(number));
+      stage.classList.toggle('is-active', stage.dataset.stage === String(stageNumber));
     });
-    pinGuide.hidden = number !== 1;
+    pinGuide.hidden = stageNumber !== 1;
   };
 
   document.querySelectorAll('[data-next-stage]').forEach((button) => {
