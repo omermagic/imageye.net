@@ -57,7 +57,7 @@ footer a { text-decoration: underline; }
 .pin-guide { position: absolute; right: clamp(35px, 7.6vw, 118px); top: 13px; width: 180px; text-align: center; font-weight: 700; }
 .pin-guide p { margin: 0; font-size: 14px; }
 .pin-arrow { display: block; height: 49px; font-size: 55px; line-height: .8; transform: rotate(-18deg); color: #4d4d48; }
-.puzzle { display: inline-block; width: 20px; height: 20px; margin: 0 4px; color: #383838; vertical-align: -5px; }
+.puzzle { display: inline-block; width: 20px; height: 20px; margin: 0 4px; background: #383838; clip-path: path("M17 8V4.5c0-.83-.67-1.5-1.5-1.5H12c0-1.1-.9-2-2-2S8 1.9 8 3H4.5C3.67 3 3 3.67 3 4.5V8c1.1 0 2 .9 2 2s-.9 2-2 2v3.5c0 .83.67 1.5 1.5 1.5h11c.83 0 1.5-.67 1.5-1.5V12c1.1 0 2-.9 2-2s-.9-2-2-2Zm-1.5 7.5h-11v-2.34c1.18-.56 2-1.77 2-3.16s-.82-2.6-2-3.16V4.5h11v11Z"); vertical-align: -5px; }
 .welcome-card { width: 565px; min-height: 515px; border-radius: 20px; background: #f9f9fe; box-shadow: rgb(159 155 167 / 67%) 0 11px 36px; display: flex; flex-direction: column; align-items: center; padding: 41px 50px 40px; }
 .welcome-card h1 { margin: 0 0 29px; color: #383838; font-size: 28px; line-height: 1.2; letter-spacing: -.5px; font-weight: 400; }
 .welcome-card h1 strong { color: #c520ff; font-weight: 700; }
