@@ -57,7 +57,7 @@ footer a { text-decoration: underline; }
 .pin-guide { position: absolute; right: clamp(35px, 7.6vw, 118px); top: 13px; width: 180px; text-align: center; font-weight: 700; }
 .pin-guide p { margin: 0; font-size: 14px; }
 .pin-arrow { display: block; height: 49px; font-size: 55px; line-height: .8; transform: rotate(-18deg); color: #4d4d48; }
-.puzzle { display: inline-block; width: 19px; height: 19px; margin: 0 4px; color: #383838; vertical-align: -4px; }
+.puzzle { display: inline-block; width: 20px; height: 20px; margin: 0 4px; color: #383838; vertical-align: -5px; }
 .welcome-card { width: 565px; min-height: 515px; border-radius: 20px; background: #f9f9fe; box-shadow: rgb(159 155 167 / 67%) 0 11px 36px; display: flex; flex-direction: column; align-items: center; padding: 41px 50px 40px; }
 .welcome-card h1 { margin: 0 0 29px; color: #383838; font-size: 28px; line-height: 1.2; letter-spacing: -.5px; font-weight: 400; }
 .welcome-card h1 strong { color: #c520ff; font-weight: 700; }
