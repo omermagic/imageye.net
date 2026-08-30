@@ -26,16 +26,30 @@ if (onboarding) {
   const showStage = (number) => {
     const stageNumber = Number(number);
 
-    // Imageye's content script listens for this message and opens the
-    // extension. Keep it in the click flow so Chrome preserves user intent.
     if (stageNumber === 3) {
-      window.postMessage('imageye_open', '*');
+      // Imageye also detects CSS background images. Use a plain color in the
+      // gallery phase so the four gallery photos are the only detected files.
+      onboarding.style.backgroundImage = 'none';
     }
 
     stages.forEach((stage) => {
-      stage.classList.toggle('is-active', stage.dataset.stage === String(stageNumber));
+      const isActive = stage.dataset.stage === String(stageNumber);
+      stage.classList.toggle('is-active', isActive);
+
+      // The extension scans every image in the document, including images in
+      // hidden stages. Remove the earlier stages so phase 3 contains exactly
+      // the four gallery images.
+      if (stageNumber === 3 && !isActive) {
+        stage.remove();
+      }
     });
     pinGuide.hidden = stageNumber !== 1;
+
+    // Imageye's content script listens for this message and opens the
+    // extension. Send it only after the previous stage images are gone.
+    if (stageNumber === 3) {
+      window.postMessage('imageye_open', '*');
+    }
   };
 
   document.querySelectorAll('[data-next-stage]').forEach((button) => {
