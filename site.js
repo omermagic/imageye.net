@@ -20,13 +20,12 @@ document.querySelectorAll('.reveal').forEach((element) => observer.observe(eleme
 const onboarding = document.getElementById('onboarding');
 
 if (onboarding) {
-  const pinGuide = document.getElementById('pin-guide');
   const stages = [...document.querySelectorAll('.onboarding-stage')];
 
   const showStage = (number) => {
     const stageNumber = Number(number);
 
-    if (stageNumber === 3) {
+    if (stageNumber === 2) {
       // Imageye also detects CSS background images. Use a plain color in the
       // gallery phase so the four gallery photos are the only detected files.
       onboarding.style.backgroundImage = 'none';
@@ -37,17 +36,16 @@ if (onboarding) {
       stage.classList.toggle('is-active', isActive);
 
       // The extension scans every image in the document, including images in
-      // hidden stages. Remove the earlier stages so phase 3 contains exactly
+      // hidden stages. Remove the earlier stage so phase 2 contains exactly
       // the four gallery images.
-      if (stageNumber === 3 && !isActive) {
+      if (stageNumber === 2 && !isActive) {
         stage.remove();
       }
     });
-    pinGuide.hidden = stageNumber !== 1;
 
     // Imageye's content script listens for this message and opens the
     // extension. Send it only after the previous stage images are gone.
-    if (stageNumber === 3) {
+    if (stageNumber === 2) {
       window.postMessage('imageye_open', '*');
     }
   };
