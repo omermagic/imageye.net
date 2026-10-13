@@ -50,9 +50,9 @@ h1 { margin: 16px 0 17px; font-size: clamp(44px, 4.2vw, 64px); line-height: .94;
 .pro-intro h2 { margin: 0 0 20px; font-size: clamp(44px, 4vw, 62px); line-height: .95; letter-spacing: -1.8px; }
 .pro-intro p { margin: 0 0 30px; color: rgb(255 255 255 / 74%); font-size: 18px; line-height: 1.55; }
 .pro-intro .chrome-button { color: #7b14ca; }
-.pro-benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-.pro-benefit { min-height: 185px; padding: 26px; border: 1px solid rgb(255 255 255 / 14%); border-radius: 22px; background: rgb(255 255 255 / 10%); backdrop-filter: blur(8px); }
-.pro-icon { width: 40px; height: 40px; margin-bottom: 24px; border-radius: 12px; background: #fff; color: #7b14ca; display: grid; place-items: center; font-size: 22px; font-weight: 700; box-shadow: 0 8px 25px rgb(35 4 84 / 22%); }
+.pro-benefits { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.pro-benefit { min-height: 0; padding: 24px 26px; border: 1px solid rgb(255 255 255 / 14%); border-radius: 22px; background: rgb(255 255 255 / 10%); backdrop-filter: blur(8px); display: grid; grid-template-columns: 40px 1fr; gap: 18px; align-items: start; }
+.pro-icon { width: 40px; height: 40px; border-radius: 12px; background: #fff; color: #7b14ca; display: grid; place-items: center; font-size: 22px; font-weight: 700; box-shadow: 0 8px 25px rgb(35 4 84 / 22%); }
 .pro-benefit h3 { margin: 0 0 8px; font-size: 18px; }
 .pro-benefit p { margin: 0; color: rgb(255 255 255 / 70%); font-size: 14px; line-height: 1.45; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
@@ -133,8 +133,6 @@ footer a { text-decoration: underline; }
   .pro-section { width: calc(100% - 30px); margin: 35px auto 75px; padding: 46px 24px; border-radius: 28px; grid-template-columns: 1fr; gap: 40px; }
   .pro-intro h2 { font-size: 42px; }
   .pro-benefits { grid-template-columns: 1fr; }
-  .pro-benefit { min-height: 0; display: grid; grid-template-columns: 40px 1fr; gap: 18px; }
-  .pro-icon { margin-bottom: 0; }
   .feedback { padding: 70px 20px; }
   .feedback > h2 { font-size: 42px; }
   .feedback-grid { grid-template-columns: 1fr; }
